@@ -3,7 +3,8 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  NavLink
 } from 'react-router-dom'
 import Header from './header.js'
 import Home from './home.js'
@@ -22,9 +23,9 @@ const BasicExample = ({match}) => (
       <Header/>
         <div className="nav-wp clearfix">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><NavLink exact to="/" activeStyle={{fontWeight: 'bold',color: 'black'}}>Home</NavLink ></li>
+            <li><NavLink exact to="/about" activeStyle={{fontWeight: 'bold',color: 'black'}}>About</NavLink ></li>
+            <li><NavLink exact to="/contact" activeStyle={{fontWeight: 'bold',color: 'black'}}>Contact</NavLink ></li>
           </ul>
         </div>
         <Main>
